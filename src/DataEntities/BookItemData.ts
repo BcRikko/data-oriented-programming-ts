@@ -1,6 +1,6 @@
 export type BookItemID = string
 
-export type BookItem = {
+export type BookItemData = {
   id: BookItemID
   libID: string
   isLent: boolean

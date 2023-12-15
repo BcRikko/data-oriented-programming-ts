@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "strict": true,
+    "moduleResolution": "NodeNext",
     "skipLibCheck": true
   }
 }
