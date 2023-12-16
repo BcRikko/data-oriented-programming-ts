@@ -5,4 +5,6 @@ export type MemberData = {
   email: Email
   encryptedPassword: string
   isBlocked: boolean
+  isVIP: boolean
+  isSuper: boolean
 }

@@ -1,5 +1,6 @@
 export * from './AuthorData'
 export * from './BookData'
+export * from './BookInfoData'
 export * from './BookItemData'
 export * from './BookLendingData'
 export * from './CatalogData'
