@@ -1,4 +1,4 @@
-import { BookData, BookItemData, BookLendingData, CatalogData, MemberID } from "../../DataEntities"
+import { BookData, BookItemData, BookLendingData, CatalogData, MemberID } from "../../DataModels"
 
 
 export function searchBook(catalogData: CatalogData, searchQuery: unknown): BookData {

@@ -1,4 +1,4 @@
-import { UserManagementData, MemberID, UserID } from "../../DataEntities";
+import { UserManagementData, MemberID, UserID } from "../../DataModels";
 
 export function isLibrarian(userManagementData: UserManagementData, userID: UserID): boolean {
   // TODO:

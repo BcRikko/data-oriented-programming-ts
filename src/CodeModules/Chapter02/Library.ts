@@ -1,4 +1,4 @@
-import { BookData, BookItemData, BookItemID, BookLendingData, LibraryData, MemberID, UserID } from "../../DataEntities";
+import { BookData, BookItemData, BookItemID, BookLendingData, LibraryData, MemberID, UserID } from "../../DataModels";
 import * as UserManagement from "./UserManagement";
 import * as Catalog from "./Catalog";
 
