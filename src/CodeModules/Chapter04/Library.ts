@@ -1,6 +1,9 @@
+import * as _ from "lodash"
+import { produce } from "immer"
+
 import { BookData, BookItemData, BookItemID, BookLendingData, LibraryData, MemberData, MemberID, UserID } from "../../DataModels";
 import * as UserManagement from "./UserManagement";
-import * as Catalog from "./Catalog";
+import * as Catalog from "../Chapter03/Catalog";
 
 export function searchBook(libraryData: LibraryData, searchQuery: unknown): BookData {
   // TODO:
@@ -54,4 +57,16 @@ export function searchBooksByTitleJSON(libraryData: LibraryData, query: string):
   const results = Catalog.searchBooksByTitle(_.get(libraryData, "catalog"), query)
   const json = JSON.stringify(results)
   return json
+}
+
+export function addMember(libraryData: LibraryData, member: MemberData): LibraryData {
+  const currentUserManagement = _.get(libraryData, "userManagement")
+  const nextUserManagementData = UserManagement.addMember(currentUserManagement, member)
+
+  const nextLibraryData = produce(
+    libraryData,
+    draft => _.set(draft, "userManagement", nextUserManagementData)
+  )
+  
+  return nextLibraryData
 }
